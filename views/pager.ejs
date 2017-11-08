@@ -1,0 +1,42 @@
+  
+  
+  <div id="pagerDiv">
+       <% if (pagerObj.totalPageCount>1){ %>
+           <% if (pagerObj.currentPageNum>0){ %>
+              <a id="prevPageLink" href="/post/showEntriesList?page=<%= pagerObj.currentPageNum %>">Previous page</a>
+           <% } %>
+              <label style="color:red;"><%= pagerObj.currentPageNum+1 %></label>
+           <% if (pagerObj.currentPageNum < pagerObj.totalPageCount-1){ %>
+              <a id="nextPageLink" href="/post/showEntriesList?page=<%= pagerObj.currentPageNum+2 %>">Next page</a>
+           <% } %>
+       <% } %>
+  </div>
+  
+  
+  <!--
+  <div id="pagerDiv">
+       <% if (pagerObj.totalPageCount>1){ %>
+           <% if (pagerObj.currentPageNum>0){ %>
+              <a id="prevPageLink" href="/post/showEntriesList/<%= pagerObj.currentPageNum %>">Previous page</a>
+           <% } %>
+              <label style="color:red;"><%= pagerObj.currentPageNum+1 %></label>
+           <% if (pagerObj.currentPageNum < pagerObj.totalPageCount-1){ %>
+              <a id="nextPageLink" href="/post/showEntriesList/<%= pagerObj.currentPageNum+2 %>">Next page</a>
+           <% } %>
+       <% } %>
+  </div>
+  -->
+  
+  <div id="btnDiv" style="margin-top:20px;">
+     <input id="returnBtn" type="button" value="Back to Post" />
+  </div>
+
+  <script type="text/javascript">
+          $(document).ready(function(){
+              
+              $("input#returnBtn").bind("click", function(){
+                    window.location.href='/post/showPostForm';
+              });
+
+          });
+  </script>

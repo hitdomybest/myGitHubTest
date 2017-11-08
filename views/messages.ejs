@@ -1,0 +1,17 @@
+
+<% if (messages.length>0) { %>
+
+      <% for (var index in messages){
+              var message=messages[index];
+              var type=message["type"]; 
+              var msg=message["string"];   
+       %>
+              type: <%= type %> <br/>  
+              msg: <%= msg %>
+      <% } %>
+
+      <% removeMessages() %>
+
+<% } else { %>
+      
+<% } %>

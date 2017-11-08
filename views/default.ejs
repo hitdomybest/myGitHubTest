@@ -1,0 +1,33 @@
+
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% if (uid) { %>
+       Welcome, <%= uname %>, <a href="/loginout/doLogout">Log out</a>
+    <% } else { %>
+       <a href="/loginout/showLoginForm">Log in</a>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="/register/showRegisterForm">Register</a>
+    <% } %>
+  </body>
+</html>
+-->
+
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% include login_menu %>
+  </body>
+</html>
+
+

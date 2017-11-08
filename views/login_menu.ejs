@@ -1,0 +1,11 @@
+
+
+    <% if (uid) { %>
+       Welcome, <%= uname %>!   <a href="/post/showEntriesList">Entries</a>  <a href="/post/showPostForm">Post</a>  <a href="/loginout/doLogout">Log out</a>
+    <% } else { %>
+       <a href="/post/showEntriesList">Entries</a>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="/loginout/showLoginForm">Log in</a>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="/register/showRegisterForm">Register</a>
+    <% } %>
