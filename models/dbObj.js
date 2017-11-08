@@ -17,4 +17,5 @@ var dbObj=mysql.createConnection({
     database: "userpost"
 });
 
+
 module.exports=dbObj;
