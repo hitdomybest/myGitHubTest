@@ -134,7 +134,8 @@ app.use(function(req, res, next) {
 */
 
 /*
-// set ERROR_ROUTE=1:* & node app
+// set ERROR_ROUTE=1:* & node app.js //windows
+// ERROR_ROUTE=1 node app.js  //linux
 */
 
 if (process.env.ERROR_ROUTE){
